@@ -1,0 +1,28 @@
+$color1: #FFFFFF
+$color2: #000000
+$color3: #00A868
+$color4: #422755
+$color5: #363636
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    font-size: 62.5%
+
+body, input, button, option
+    font-family: 'Open Sans', sans-serif;
+
+
+@mixin flexbox($directionValue, $justifyValue, $alignValue) 
+    display: flex;
+    flex-direction: $directionValue
+    justify-content: $justifyValue
+    align-items: $alignValue
+
+@mixin fontConfig($fontSize, $fontWeight, $fontColor)
+    font-size: $fontSize
+    font-weight: $fontWeight
+    color: $fontColor

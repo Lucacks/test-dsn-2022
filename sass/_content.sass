@@ -1,0 +1,109 @@
+main
+    @include flexbox(column, center, center)
+
+    .filter
+        @include flexbox(row, space-between, center)
+        width: 100%
+        max-width: 1080px
+        height: 85px
+        margin: 56px auto
+        padding: 0 145px 0 110px
+        background: $color3
+        border-radius: 8px
+
+        .search-input
+            width: 311px
+            position: relative
+
+            .form-input
+                position: relative
+
+            .search-btn
+                position: absolute
+                right: 0
+                width: 69px
+                background: $color3
+                color: $color1
+                border: 2px solid $color1
+
+                &:hover
+                    background: #006840
+
+        .filter-opt
+            @include flexbox(row, space-between, center)
+            width: 100%
+            max-width: 300px
+            .opt-text
+                @include fontConfig(1.4rem, 700, $color1)
+                
+            #filter-select
+                font-family: 'Open Sans', sans-serif
+                width: 100%
+                max-width: 193px
+                height: 34px
+                color: #414141
+                padding: 0 19px
+                border-radius: 8px
+                border: none
+                outline: none
+
+                /** Arrow **/
+                appearance: none;
+                background-image: url("../svg/select-arrow.svg")
+                background-repeat: no-repeat
+                background-position: right 15px top 50%
+                background-size: 10px
+
+    @import 'product-card'
+
+    .form-input
+        font-family: 'Open Sans', sans-serif
+        width: 100%
+        height: 34px
+        padding: 0 19px
+        border-radius: 8px
+        border: none
+        outline: none
+
+        &::placeholder
+            @include fontConfig(1.2rem, 400, #757575)
+    
+    button
+        @include fontConfig(1.4rem, 700, $color3)
+        width: 15%
+        max-width: 100px
+        height: 34px
+        border-radius: 8px
+        border: none
+        outline: none
+        cursor: pointer
+        transition: .5s
+
+        &:hover
+            background: #006840
+            color: $color1
+
+
+    /** Newsletter box **/
+    .newsletter
+        max-width: 875px
+        width: 100%
+        background: $color3
+        margin: 28px auto
+        padding: 22px 45px
+        border-radius: 8px
+
+        .news-title
+            @include fontConfig(1.4rem, 700, $color1)
+            margin-bottom: 7px
+
+        .news-form-container       
+            .news-form
+                @include flexbox(row, space-between, flex-end) 
+                .news-input-container
+                    @include flexbox(column, center, flex-start)
+                    width: 42%
+
+                    label
+                        @include fontConfig(1.2rem, 400, $color1)
+                        margin: 0 0 2px 4px

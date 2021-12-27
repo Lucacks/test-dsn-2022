@@ -1,0 +1,26 @@
+.product-grid-cards
+
+    .product-card
+        @include flexbox(column, center, center)
+        width: 252px
+        height: 360px
+        padding: 18px
+        border: 1px solid $color2
+        border-radius: 14px
+        img
+            width: 216px
+            height: 216px
+        
+        .product-content
+            @include flexbox(column, center, flex-start)
+            width: 100%            
+
+            .product-title
+                @include fontConfig(1.4rem, 400, $color2)
+                height: 40px
+
+            .product-old-price
+
+            .product-price
+
+            .product-installments
