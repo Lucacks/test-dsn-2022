@@ -1,4 +1,10 @@
 .product-grid-cards
+    display: grid
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
+    grid-gap: 30px
+
+    width: 100%
+    max-width: 1080px
 
     .product-card
         @include flexbox(column, center, center)
@@ -13,11 +19,13 @@
         
         .product-content
             @include flexbox(column, center, flex-start)
-            width: 100%            
+            width: 100% 
 
             .product-title
                 @include fontConfig(1.4rem, 400, $color2)
                 height: 40px
+                margin: 15px 0
+                -webkit-line-clamp: 2
 
             .product-old-price
 
