@@ -2,12 +2,11 @@ main
     @include flexbox(column, center, center)
 
     .filter
-        @include flexbox(row, space-between, center)
+        @include flexbox(row, space-evenly, center)
         width: 100%
         max-width: 1080px
         height: 85px
-        margin: 56px auto
-        padding: 0 145px 0 110px
+        margin: 56px 10px 0
         background: $color3
         border-radius: 8px
 
@@ -53,7 +52,11 @@ main
                 background-repeat: no-repeat
                 background-position: right 15px top 50%
                 background-size: 10px
-
+        
+        @include tabletSize
+            flex-direction: column
+            height: 146px
+            display: none
 
     .form-input
         font-family: 'Open Sans', sans-serif
@@ -67,7 +70,8 @@ main
         &::placeholder
             @include fontConfig(1.2rem, 400, #757575)
     
-    button
+    .btn, 
+    .search-btn
         @include fontConfig(1.4rem, 700, $color3)
         width: 15%
         max-width: 100px
@@ -89,7 +93,7 @@ main
         max-width: 875px
         width: 100%
         background: $color3
-        margin: 28px auto
+        margin: 0 auto 28px
         padding: 22px 45px
         border-radius: 8px
 
@@ -107,3 +111,6 @@ main
                     label
                         @include fontConfig(1.2rem, 400, $color1)
                         margin: 0 0 2px 4px
+
+        @include tabletSize
+            display: none

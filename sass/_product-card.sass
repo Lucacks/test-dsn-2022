@@ -1,34 +1,120 @@
 .product-grid-cards
     display: grid
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
-    grid-gap: 30px
-
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr))
+    grid-gap: 24px
+    justify-items: center
+    align-items: center
     width: 100%
     max-width: 1080px
+    margin: 73px auto
+    padding: 0 10px
 
     .product-card
         @include flexbox(column, center, center)
+        position: relative
         width: 252px
-        height: 360px
+        height: auto
         padding: 18px
+        text-align: center
         border: 1px solid $color2
         border-radius: 14px
+
+        .flag-discount
+            @include fontConfig(1.2rem, 700, $color1)
+            position: absolute
+            left: 0
+            top: 55px
+            width: 69px
+            height: 30px
+            line-height: 2.5
+            background: $color3
+            border-radius: 0 8px 8px 0
+        
+        .flag-free
+            @include fontConfig(1.2rem, 400, $color1)
+            position: absolute
+            left: 0
+            top: 20px
+            width: 88px
+            height: 30px
+            line-height: 2.5
+            background: $color4
+            border-radius: 0 8px 8px 0
+
+
         img
-            width: 216px
-            height: 216px
         
         .product-content
             @include flexbox(column, center, flex-start)
-            width: 100% 
+            text-align: left
 
             .product-title
                 @include fontConfig(1.4rem, 400, $color2)
                 height: 40px
                 margin: 15px 0
                 -webkit-line-clamp: 2
+                overflow: hidden
 
-            .product-old-price
+            .price-container
+                @include flexbox(row, flex-start, end)
+                height: 23px
+                margin-bottom: 5px
 
-            .product-price
+                .product-old-price
+                    @include fontConfig(1.3rem, 400, $color2)
+                    text-decoration: line-through
+                    margin-right: 5px
 
+                .product-price
+                    @include fontConfig(1.8rem, 700, $color3)
+                    
             .product-installments
+                @include fontConfig(1rem, 400, $color2)
+                height: 14px
+            
+            .product-not-available
+                @include fontConfig(1.3rem, 400, $color2)
+                margin: auto
+                height: 38px
+
+        .product-card-overlay
+            position: absolute
+            width: 100%
+            height: 100%
+            overflow: hidden
+            transition: .5s
+            
+            .product-page-btn
+                visibility: hidden
+
+        &:hover
+
+            .product-card-overlay
+                background: rgba(255, 255, 255, .7)
+
+                .product-page-btn
+                    @include fontConfig(1.2rem, 700, $color1)
+                    position: absolute
+                    visibility: visible
+                    top: 45%
+                    left: 50%
+                    transform: translate(-50%, 0)
+                    margin: 0 auto
+                    width: 182px
+                    height: 36px
+                    background: $color3
+                    border-radius: 5px
+                    border: none
+                    outline: none
+                    cursor: pointer
+                    transition: .5s
+
+                    &:hover
+                        background: #006840
+
+       
+
+    .not-available
+        opacity: .5
+
+                

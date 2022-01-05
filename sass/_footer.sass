@@ -8,10 +8,17 @@ footer
         .infos-img
             min-width: 216px
             margin-right: 65px
+            @include tabletSize
+                margin-bottom: 33px
+                margin-right: 0
 
         .infos-text
             width: 70%
             @include fontConfig(1.4rem, 400, $color2)
+
+        @include tabletSize
+            flex-direction: column
+            
 
     .footer
         @include flexbox(column, center, center)
