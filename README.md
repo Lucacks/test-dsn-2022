@@ -39,8 +39,8 @@ A página é completamente responsiva (podendo ser testada utilizando a ferramen
 
 > Telas grandes
 
-![Telas grandes](https://raw.githubusercontent.com/Lucacks/test-dsn-2022/main/img/Test_desktop.png)
+![Telas grandes](https://raw.githubusercontent.com/Lucacks/test-dsn-2022/main/img/readme_prints/Teste_desktop.png)
 
 > Telas pequenas
 
-![Telas pequenas](https://raw.githubusercontent.com/Lucacks/test-dsn-2022/main/img/Teste_mobile.png)
+![Telas pequenas](https://raw.githubusercontent.com/Lucacks/test-dsn-2022/main/img/readme_prints/Teste_mobile.png)
