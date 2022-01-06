@@ -27,18 +27,20 @@ main
 
                 &:hover
                     background: #006840
+            
+            @include tabletSize
+                width: 90%
 
         .filter-opt
             @include flexbox(row, space-between, center)
-            width: 100%
-            max-width: 300px
+            width: 300px
+            
             .opt-text
                 @include fontConfig(1.4rem, 700, $color1)
                 
             #filter-select
                 font-family: 'Open Sans', sans-serif
-                width: 100%
-                max-width: 193px
+                width: 193px
                 height: 34px
                 color: #414141
                 padding: 0 19px
@@ -52,11 +54,17 @@ main
                 background-repeat: no-repeat
                 background-position: right 15px top 50%
                 background-size: 10px
-        
+
+                @include tabletSize
+                    width: 80%
+
+            @include tabletSize
+                width: 90%
+
         @include tabletSize
             flex-direction: column
             height: 146px
-            display: none
+            width: 95.5%
 
     .form-input
         font-family: 'Open Sans', sans-serif

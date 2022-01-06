@@ -14,9 +14,19 @@
 
     &-subtitle
         @include fontConfig(1.8rem, 400, $color1)
-        text-align: center
+        text-align: center   
         
         @include tabletSize
-            font-size: 1.6rem
-
+            display: none
     
+    @include tabletSize
+        height: 160px
+
+.subtitle-m
+    display: none
+
+    @include tabletSize
+        display: block
+        @include fontConfig(1.6rem, 400, $color4)
+        text-align: center
+        margin-top: 20px

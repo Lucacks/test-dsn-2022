@@ -12,12 +12,20 @@
     .product-card
         @include flexbox(column, center, center)
         position: relative
-        width: 252px
+        width: 100%
         height: auto
         padding: 18px
         text-align: center
         border: 1px solid $color2
         border-radius: 14px
+
+        img
+            max-width: 100%
+            height: auto
+
+        .product-img
+            width: 100%
+            overflow: hidden
 
         .flag-discount
             @include fontConfig(1.2rem, 700, $color1)
@@ -29,6 +37,13 @@
             line-height: 2.5
             background: $color3
             border-radius: 0 8px 8px 0
+
+            @include tabletSize
+                font-size: 1rem
+                top: 47px
+                width: 56px
+                height: 24px
+                border-radius: 0 4px 4px 0
         
         .flag-free
             @include fontConfig(1.2rem, 400, $color1)
@@ -41,11 +56,15 @@
             background: $color4
             border-radius: 0 8px 8px 0
 
-
-        img
+            @include tabletSize
+                font-size: 1rem
+                width: 65px
+                height: 24px
+                border-radius: 0 4px 4px 0
         
         .product-content
             @include flexbox(column, center, flex-start)
+            width: 100%
             text-align: left
 
             .product-title
@@ -54,6 +73,12 @@
                 margin: 15px 0
                 -webkit-line-clamp: 2
                 overflow: hidden
+
+                @include tabletSize
+                    font-size: 1.2rem
+                    height: 40px
+                    margin: 0 0 18px
+                    line-height: 1.2
 
             .price-container
                 @include flexbox(row, flex-start, end)
@@ -65,17 +90,52 @@
                     text-decoration: line-through
                     margin-right: 5px
 
+                    @include tabletSize
+                        font-size: 1.3rem
+
                 .product-price
                     @include fontConfig(1.8rem, 700, $color3)
-                    
+                    align-items: flex-start
+
+                    @include tabletSize
+                        font-size: 1.6rem
+
+                @include tabletSize
+                    @include flexbox(column, flex-end, flex-start)
+                    height: 40px
+                    margin-bottom: 8px
+
             .product-installments
                 @include fontConfig(1rem, 400, $color2)
                 height: 14px
+
+                @include tabletSize
+                    height: 26px
             
             .product-not-available
                 @include fontConfig(1.3rem, 400, $color2)
                 margin: auto
                 height: 38px
+
+            .btn-mobile
+                display: none
+
+            @include tabletSize
+                height: 145px
+
+                .btn-mobile
+                    @include fontConfig(1.2rem, 700, $color1)
+                    display: block
+                    margin-top: 8px
+                    width: 100%
+                    height: 28px
+                    background: $color3
+                    border-radius: 5px
+                    border: none
+                    outline: none
+                    cursor: pointer
+                    transition: .5s
+                    text-transform: uppercase
 
         .product-card-overlay
             position: absolute
@@ -86,6 +146,9 @@
             
             .product-page-btn
                 visibility: hidden
+            
+            @include tabletSize
+                display: none
 
         &:hover
 
@@ -108,10 +171,13 @@
                     outline: none
                     cursor: pointer
                     transition: .5s
+                    text-transform: uppercase
 
                     &:hover
                         background: #006840
 
+        @include tabletSize
+            flex-direction: row
        
 
     .not-available
