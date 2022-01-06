@@ -35,3 +35,12 @@ A página é completamente responsiva (podendo ser testada utilizando a ferramen
 
 <img align="center" alt="HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/9f4f5cdb393299a81125eb5127929ea7bfe42889/icons/sass/sass-original.svg" style="max-width:100%">
 
+## Print screens
+
+> Telas grandes
+
+![Telas grandes](https://raw.githubusercontent.com/Lucacks/test-dsn-2022/main/img/Test_desktop.png)
+
+> Telas pequenas
+
+![Telas pequenas](https://raw.githubusercontent.com/Lucacks/test-dsn-2022/main/img/Teste_mobile.png)
