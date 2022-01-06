@@ -69,14 +69,15 @@
 
             .product-title
                 @include fontConfig(1.4rem, 400, $color2)
-                height: 40px
+                height: 30px
                 margin: 15px 0
                 -webkit-line-clamp: 2
                 overflow: hidden
+                text-overflow: ellipsis
 
                 @include tabletSize
                     font-size: 1.2rem
-                    height: 40px
+                    height: 30px
                     margin: 0 0 18px
                     line-height: 1.2
 
@@ -86,7 +87,7 @@
                 margin-bottom: 5px
 
                 .product-old-price
-                    @include fontConfig(1.3rem, 400, $color2)
+                    @include fontConfig(1.3rem, 400, $color5)
                     text-decoration: line-through
                     margin-right: 5px
 
@@ -106,7 +107,7 @@
                     margin-bottom: 8px
 
             .product-installments
-                @include fontConfig(1rem, 400, $color2)
+                @include fontConfig(1rem, 400, $color5)
                 height: 14px
 
                 @include tabletSize
@@ -115,13 +116,18 @@
             .product-not-available
                 @include fontConfig(1.3rem, 400, $color2)
                 margin: auto
-                height: 38px
+                height: 94px
+
+                @include tabletSize
+                    margin: 0
+                    justify-content: flex-start
 
             .btn-mobile
                 display: none
 
             @include tabletSize
-                height: 145px
+                height: 158px
+                justify-content: flex-start
 
                 .btn-mobile
                     @include fontConfig(1.2rem, 700, $color1)

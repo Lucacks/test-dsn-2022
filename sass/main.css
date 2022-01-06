@@ -387,16 +387,17 @@ main .product-grid-cards .product-card .product-content .product-title {
   font-size: 1.4rem;
   font-weight: 400;
   color: #000000;
-  height: 40px;
+  height: 30px;
   margin: 15px 0;
   -webkit-line-clamp: 2;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media screen and (max-width: 920px) {
   main .product-grid-cards .product-card .product-content .product-title {
     font-size: 1.2rem;
-    height: 40px;
+    height: 30px;
     margin: 0 0 18px;
     line-height: 1.2;
   }
@@ -423,7 +424,7 @@ main .product-grid-cards .product-card .product-content .price-container {
 main .product-grid-cards .product-card .product-content .price-container .product-old-price {
   font-size: 1.3rem;
   font-weight: 400;
-  color: #000000;
+  color: #363636;
   text-decoration: line-through;
   margin-right: 5px;
 }
@@ -472,7 +473,7 @@ main .product-grid-cards .product-card .product-content .price-container .produc
 main .product-grid-cards .product-card .product-content .product-installments {
   font-size: 1rem;
   font-weight: 400;
-  color: #000000;
+  color: #363636;
   height: 14px;
 }
 
@@ -487,7 +488,16 @@ main .product-grid-cards .product-card .product-content .product-not-available {
   font-weight: 400;
   color: #000000;
   margin: auto;
-  height: 38px;
+  height: 94px;
+}
+
+@media screen and (max-width: 920px) {
+  main .product-grid-cards .product-card .product-content .product-not-available {
+    margin: 0;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
 main .product-grid-cards .product-card .product-content .btn-mobile {
@@ -496,7 +506,10 @@ main .product-grid-cards .product-card .product-content .btn-mobile {
 
 @media screen and (max-width: 920px) {
   main .product-grid-cards .product-card .product-content {
-    height: 145px;
+    height: 158px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   main .product-grid-cards .product-card .product-content .btn-mobile {
     font-size: 1.2rem;
@@ -678,7 +691,13 @@ footer .linx-infos .infos-text {
   width: 70%;
   font-size: 1.4rem;
   font-weight: 400;
-  color: #000000;
+  color: #414141;
+}
+
+@media screen and (max-width: 920px) {
+  footer .linx-infos .infos-text {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 920px) {

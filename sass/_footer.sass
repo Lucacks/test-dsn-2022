@@ -15,7 +15,10 @@ footer
 
         .infos-text
             width: 70%
-            @include fontConfig(1.4rem, 400, $color2)
+            @include fontConfig(1.4rem, 400, $color6)
+
+            @include tabletSize
+                text-align: center
 
         @include tabletSize
             flex-direction: column
