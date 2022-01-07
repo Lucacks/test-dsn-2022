@@ -65,11 +65,12 @@
         .product-content
             @include flexbox(column, center, flex-start)
             width: 100%
+            height: 112px
             text-align: left
 
             .product-title
                 @include fontConfig(1.4rem, 400, $color2)
-                height: 30px
+                height: 40px
                 margin: 15px 0
                 -webkit-line-clamp: 2
                 overflow: hidden
@@ -116,10 +117,10 @@
             .product-not-available
                 @include fontConfig(1.3rem, 400, $color2)
                 margin: auto
-                height: 94px
 
                 @include tabletSize
                     margin: 0
+                    height: 94px
                     justify-content: flex-start
 
             .btn-mobile
